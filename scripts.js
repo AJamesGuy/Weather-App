@@ -1,9 +1,13 @@
-const longitude = document.getElementById('longitude');
-const latitude = document.getElementById('latitude');
 const search = document.getElementById('search');
 const body = document.querySelector('body');
-const openWeatherKey = '84edb5205e29d6d9bf3ea01c26ef407a'
-const geocodeKey = '6950810907321789655968xnqe076a7'
+const country = document.getElementById('country');
+const state = document.getElementById('state');
+const city = document.getElementById('city');
+const street = document.getElementById('street')
+import { geocodeKey } from './api.js';
+import { openWeatherKey } from './api.js';
+
+
 
 async function geocode() {
     const response = await fetch(`https://geocode.maps.co/search?q=New+York+NY+US&api_key=${geocodeKey}`)
